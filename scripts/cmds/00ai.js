@@ -48,7 +48,7 @@ module.exports = {
       }
       const prompt = event.body.substring(prefix.length).trim();
       if (!prompt) {
-        await message.reply("≛𝙇𝙄𝙉𝙀𝙎≛\n\n[ಥ⁠‿⁠ಥ....?");
+        await message.reply("≛𝙃𝙐𝙉𝙏𝙀𝙍'𝙎 𝙇𝙄𝙉𝙀≛\n\n (⁠･ั⁠ω⁠･ั⁠).....? ");
         return;
       }
       const senderID = event.senderID;
