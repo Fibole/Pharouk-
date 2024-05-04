@@ -18,15 +18,15 @@ module.exports = {
  onStart: async function ({ api, args, message, event, usersData }) {
  const allUsers = await usersData.getAll();
  
- const topUsers = allUsers.sort((a, b) => b.money - a.money).slice(0, 100);
+ const topUsers = allUsers.sort((a, b) => b.money - a.money).slice(0,10);
  
- const topUsersList = topUsers.map((user, index) => `${index + 1}.  🔱${user.name}🔱:
+ const topUsersList = topUsers.map((user, index) => `${index + 1}.  ✦${user.name}✦:
 
-𝙱𝙰𝙻𝙰𝙽𝙲𝙴: ${user.money}🧋`);
+𝗕𝗔𝗟: ${user.money}💲`);
  
- const messageText = ` 𝗧𝗢𝗣 𝗥𝗘𝗖𝗛𝗘𝗦𝗧»🌐\n\n ${topUsersList.join('\n 💳')}
+ const messageText = ` 𝗧𝗢𝗣 𝗥𝗘𝗖𝗛𝗘𝗦𝗧»🌐\n\n ${topUsersList.join('\n◆')}
 
-  𝗠𝗔𝗥𝗜𝗡𝗔 `;
+  𝗕𝗢𝗧»𝗔𝗗𝗠𝗜𝗡 𝗠𝗔𝗥𝗜𝗡𝗔 `;
 
  message.reply(messageText);
  }
