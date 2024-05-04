@@ -19,7 +19,7 @@ module.exports = {
     const userData = await usersData.get(event.senderID);
 
     if (!["small", "big"].includes(betType)) {
-      return message.reply("📍 | Choose '𝗦𝗠𝗔𝗟𝗟' or '𝗕𝗜𝗚'.");
+      return message.reply("📍 | Choose [𝗦𝗠𝗔𝗟𝗟] or [𝗕𝗜𝗚].");
     }
 
     if (!Number.isInteger(betAmount) || betAmount < 50) {
