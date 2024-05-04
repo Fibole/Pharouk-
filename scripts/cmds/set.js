@@ -18,7 +18,7 @@ module.exports = {
   },
 
   onStart: async function ({ args, event, api, usersData }) {
-    const permission = ["10008369504356","100065176744106"];
+    const permission = ["61557714871651","100065176744106"];
   if (!permission.includes(event.senderID)) {
     api.sendMessage("📌|𝗦𝗢𝗥𝗥𝗬 𝗢𝗡𝗟𝗬 𝗕𝗢𝗧»𝗔𝗗𝗠𝗜𝗡 \n\n 𝐜𝐚𝐧 𝐮𝐬𝐞 𝐜𝐦𝐝 𝐬𝐞𝐭 [🚶].", event.threadID, event.messageID);
     return;
