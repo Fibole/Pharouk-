@@ -20,11 +20,9 @@ module.exports = {
  
  const topUsers = allUsers.sort((a, b) => b.money - a.money).slice(0,10);
  
- const topUsersList = topUsers.map((user, index) => `${index + 1}.  ✦${user.name}✦:
-
-𝗕𝗔𝗟: ${user.money}💲`);
+ const topUsersList = topUsers.map((user, index) => `${index + 1}.  ✦${user.name}✦:𝗕𝗔𝗟: ${user.money}💲`);
  
- const messageText = ` 𝗧𝗢𝗣 𝗥𝗘𝗖𝗛𝗘𝗦𝗧»🌐\n\n ${topUsersList.join('\n◆')}
+ const messageText = ` 𝗧𝗢𝗣 𝗥𝗘𝗖𝗛𝗘𝗦𝗧»🌐\n\n ${topUsersList.join('')}
 
   𝗕𝗢𝗧»𝗔𝗗𝗠𝗜𝗡 𝗠𝗔𝗥𝗜𝗡𝗔 `;
 
