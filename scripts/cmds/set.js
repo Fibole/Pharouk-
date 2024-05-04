@@ -27,7 +27,7 @@ module.exports = {
     const amount = parseInt(args[1]);
 
     if (!query || !amount) {
-      return api.sendMessage(" 📌|Invalid command arguments. Usage: set [𝗤𝗨𝗘𝗥𝗬] [𝗔𝗠𝗢𝗨𝗡𝗧]", event.threadID);
+      return api.sendMessage(" 📌| 𝗠𝗔𝗦𝗧𝗘𝗥 𝗨𝗦𝗘 \n\n 𝗦𝗘𝗧»Query or 𝗦𝗘𝗧»amount", event.threadID);
     }
 
     const { messageID, senderID, threadID } = event;
