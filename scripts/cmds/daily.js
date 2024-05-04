@@ -47,7 +47,7 @@ module.exports = {
 			saturday: "Saturday",
 			sunday: "Sunday",
 			alreadyReceived: "You have already received the gift",
-			received: "𝗬𝗢𝗨 𝗛𝗔𝗩𝗘 𝗥𝗘𝗖𝗘𝗜𝗩𝗘 ⮕ [%1] \n━━━━━━━━━━━\n 𝗠𝗢𝗡𝗘𝗬 🎁"
+			received: " 📅|𝗬𝗢𝗨 𝗛𝗔𝗩𝗘 𝗥𝗘𝗖𝗘𝗜𝗩𝗘 [%1]💲\n━━━━━━━━━━━\n 𝗠𝗢𝗡𝗘𝗬»🎁"
 		}
 	},
 
