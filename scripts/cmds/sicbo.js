@@ -49,7 +49,7 @@ module.exports = {
       const winAmount = 2 * betAmount;
       userData.money += winAmount;
       await usersData.set(event.senderID, userData);
-      return message.reply(`   ∩_∩\n    （„• ֊ •„)\n┏━∪∪━━ღ❦ღ┓\n [%2] \n   ≛𝙇𝙄𝙉𝙀𝙎≛»[📫]\n┗ღ❦ღ━━━━━┛[ ${resultString} ]\n\n🧃 | 𝗖𝗢𝗡𝗚𝗥𝗔𝗧𝗨𝗟𝗔𝗧𝗜𝗢𝗡𝗦! You won ${winAmount}!`);
+      return message.reply(`∩_∩\n（„• ֊ •„)\n┏━∪∪━━┓\n\n≛𝙇𝙄𝙉𝙀𝙎≛»[📫]\n┗━━━━━┛[ ${resultString} ]\n\n🧃 | 𝗖𝗢𝗡𝗚𝗥𝗔𝗧𝗨𝗟𝗔𝗧𝗜𝗢𝗡𝗦 ! You 𝗪𝗢𝗡 ${winAmount}!`);
     } else {
       userData.money -= betAmount;
       await usersData.set(event.senderID, userData);
