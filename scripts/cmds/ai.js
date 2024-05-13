@@ -18,7 +18,7 @@ async function getAIResponse(input, userId, messageID) {
     { url: 'https://ai-chat-gpt-4-lite.onrender.com/api/hercai', params: { question: input } }
   ];
 
-  let response = "𝗬𝗢𝗨𝗥 𝗤𝗨𝗘𝗦𝗧𝗜𝗢𝗡 ..............?";
+  let response = "≛𝙃𝙐𝙉𝙏𝙀𝙍 𝙇𝙄𝙉𝙀≛\n\n 𝗬𝗢𝗨𝗥 𝗤𝗨𝗘𝗦𝗧𝗜𝗢𝗡 ..............?";
   let currentIndex = 0;
 
   for (let i = 0; i < services.length; i++) {
@@ -42,7 +42,7 @@ module.exports = {
     category: 'ai',
     shortDescription: 'ai to ask anything',
   },
-  onStart: async function ({ api, event, args }) {
+  onStart: async function ({ api, event, arns }) {
     const input = args.join(' ').trim();
     if (!input) {
       api.sendMessage(``, event.threadID, event.messageID);
@@ -69,14 +69,14 @@ const fonts = {
 
     
     const { response, messageID } = await getAIResponse(input, event.senderID, event.messageID);
-    api.sendMessage(`${response}`, event.threadID, messageID);
+    api.sendMessage(`≛𝙃𝙐𝙉𝙏𝙀𝙍 𝙇𝙄𝙉𝙀≛\n━━━━━━━━━━━━━\n ${response} 🌐`, event.threadID, messageID);
   },
   onChat: async function ({ event, message }) {
     const messageContent = event.body.trim().toLowerCase();
     if (messageContent.startsWith("ai")) {
       const input = messageContent.replace(/^ai\s*/, "").trim();
       const { response, messageID } = await getAIResponse(input, event.senderID, message.messageID);
-      message.reply(`${response}`, messageID);
+      message.reply(`≛𝙃𝙐𝙉𝙏𝙀𝙍 𝙇𝙄𝙉𝙀≛\n━━━━━━━━━━━━━\n${response}🌐`, messageID);
     }
   }
 };
