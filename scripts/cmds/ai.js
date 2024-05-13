@@ -69,7 +69,7 @@ const fonts = {
 
     
     const { response, messageID } = await getAIResponse(input, event.senderID, event.messageID);
-    api.sendMessage(`≛𝙃𝙐𝙉𝙏𝙀𝙍 𝙇𝙄𝙉𝙀≛\n━━━━━━━━━━━━━\n ${response} 🌐`, event.threadID, messageID);
+    api.sendMessage(` ${response} `, event.threadID, messageID);
   },
   onChat: async function ({ event, message }) {
     const messageContent = event.body.trim().toLowerCase();
